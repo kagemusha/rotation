@@ -6,7 +6,7 @@ defmodule Rotation.Repo.Migrations.CreatePairing do
       add :pair_id, references(:pairs, on_delete: :nothing)
       add :period, :date
       add :completed, :boolean, default: false, null: false
-      add :prs, :text
+      add :pull_requests, :text
       add :comments, :text
 
       timestamps()

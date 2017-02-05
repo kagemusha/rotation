@@ -2,11 +2,16 @@ defmodule Rotation.Pairing do
   use Rotation.Web, :model
 
   schema "pairings" do
+    field :period, :date
     field :completed, :boolean, default: false
-    field :prs, :string
+    field :pull_requests, :string
     field :comments, :string
 
     timestamps()
+  end
+
+  def generate_pairings(date, preset_pairings=[]) do
+
   end
 
   @doc """
@@ -14,7 +19,7 @@ defmodule Rotation.Pairing do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:key, :completed, :prs, :comments])
-    |> validate_required([:key, :completed, :prs, :comments])
+    |> cast(params, [:period, :completed, :pull_requests, :comments])
+    |> validate_required([:period])
   end
 end

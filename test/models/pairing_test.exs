@@ -3,7 +3,7 @@ defmodule Rotation.PairingTest do
 
   alias Rotation.Pairing
 
-  @valid_attrs %{comments: "some content", completed: true, key: "some content", prs: "some content"}
+  @valid_attrs %{comments: "some content", completed: true, pull_requests: "some content"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do
@@ -11,7 +11,7 @@ defmodule Rotation.PairingTest do
     assert changeset.valid?
   end
 
-  test "changeset with invalid attributes" do
+  test "generate pairings" do
     changeset = Pairing.changeset(%Pairing{}, @invalid_attrs)
     refute changeset.valid?
   end
