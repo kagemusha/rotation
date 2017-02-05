@@ -23,6 +23,7 @@ defmodule Rotation.Web do
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
+      import Ecto.Queryable
     end
   end
 
