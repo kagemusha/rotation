@@ -1,6 +1,7 @@
+<a href="/regenerate">Regenerate</a>
 <div class="row marketing">
   <div class="col-lg-6">
-    <h4>Players</h4>
+    <h4>Developers</h4>
     <ul>
       <%= for player <- @players do %>
         <li> <%= player.name %> </li>
